@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:5000/restaurants
+method: GET
+order: 2000

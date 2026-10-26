@@ -1,0 +1,11 @@
+# Use this workspace to collaborate
+workspace:
+  id: ebfb10d2-7d3c-48d5-8cd9-0401b21325cf
+
+localResources:
+  collections:
+    - ../Food_Delivery_System.postman_collection.json
+
+cloudResources:
+  collections:
+    ../postman/collections/Food Delivery System - Exp 3: a6a2f233-417c-4429-8896-7b14f83ebafb

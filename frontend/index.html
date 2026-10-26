@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery System</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 60px;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .food-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .cart-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background: #212529;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">FoodExpress</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#restaurants">Restaurants</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div>
+      <h1>Delicious Food Delivered Fast</h1>
+      <p>Order your favorite meals online</p>
+    </div>
+  </section>
+
+  <!-- ================= RESTAURANTS ================= -->
+  <section class="container mt-5" id="restaurants">
+    <h2 class="text-center mb-4">Popular Restaurants</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" class="card-img-top" alt="Pizza Hub">
+          <div class="card-body">
+            <h5 class="card-title">Pizza Hub</h5>
+            <p>Italian & Fast Food</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" class="card-img-top" alt="Indian Spice">
+          <div class="card-body">
+            <h5 class="card-title">Indian Spice</h5>
+            <p>Indian Cuisine</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" class="card-img-top" alt="Burger Point">
+          <div class="card-body">
+            <h5 class="card-title">Burger Point</h5>
+            <p>Burgers & Snacks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFFERS ================= -->
+  <section class="container mt-5" id="offers">
+    <h2 class="text-center mb-4">Special Offers</h2>
+    <div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="d-block w-100" height="400" alt="Special Offer 1" style="object-fit:cover;">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="d-block w-100" height="400" alt="Special Offer 2" style="object-fit:cover;">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" class="d-block w-100" height="400" alt="Special Offer 3" style="object-fit:cover;">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#offerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= FILTER ================= -->
+  <section class="container mt-5">
+    <h4>Filter Food</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <select class="form-select" id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="veg">Veg</option>
+          <option value="nonveg">Non-Veg</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MENU ================= -->
+  <section class="container mt-5" id="menu">
+    <h2 class="text-center mb-4">Food Menu</h2>
+    <!-- Menu will come from MongoDB -->
+    <div class="row" id="foodContainer"></div>
+  </section>
+
+  <!-- ================= CART ================= -->
+  <section class="container mt-5" id="cart">
+    <h2 class="text-center mb-4">Shopping Cart</h2>
+    <div class="cart-box">
+      <ul class="list-group mb-3" id="cartItems"></ul>
+      <h4>Total: ₹<span id="total">0</span></h4>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="container mt-5" id="contact">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+          <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+          <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+          <textarea class="form-control mb-3" rows="5" placeholder="Message" required></textarea>
+          <button type="submit" class="btn btn-dark w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2026 FoodExpress. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // Backend URL
+    const API = "http://localhost:5000";
+
+    // ==========================================
+    // LOAD MENU FROM DATABASE
+    // ==========================================
+    async function loadMenu(url = API + "/menu") {
+      try {
+        const response = await fetch(url);
+        const menu = await response.json();
+        const container = document.getElementById("foodContainer");
+        container.innerHTML = "";
+        menu.forEach(item => {
+          const image = item.veg
+            ? "https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
+            : "https://images.unsplash.com/photo-1550547660-d9450f859349";
+
+          container.innerHTML += `
+            <div class="col-md-4 mb-4 food-item">
+              <div class="card food-card">
+                <img src="${image}" class="card-img-top" alt="${item.name}">
+                <div class="card-body">
+                  <h5 class="card-title">${item.name}</h5>
+                  <p>Cuisine: ${item.cuisine}</p>
+                  <p class="fw-bold">₹${item.price}</p>
+                  <button class="btn btn-success" onclick="addToCart('${item.name}', ${item.price})">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    // ==========================================
+    // FILTER MENU
+    // ==========================================
+    document.getElementById("categoryFilter").addEventListener("change", function () {
+      const value = this.value;
+      if (value === "all") {
+        loadMenu();
+      } else if (value === "veg") {
+        loadMenu(API + "/menu/filter?veg=true");
+      } else if (value === "nonveg") {
+        loadMenu(API + "/menu/filter?veg=false");
+      }
+    });
+
+    // ==========================================
+    // ADD ITEM TO CART
+    // ==========================================
+    async function addToCart(name, price) {
+      try {
+        const response = await fetch(API + "/cart", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ itemName: name, quantity: 1, price: price })
+        });
+        const data = await response.json();
+        console.log(data);
+        alert(name + " added to cart!");
+        loadCart();
+      } catch (error) {
+        console.log(error);
+        alert("Unable to add item to cart.");
+      }
+    }
+
+    // ==========================================
+    // LOAD CART
+    // ==========================================
+    async function loadCart() {
+      try {
+        const response = await fetch(API + "/cart");
+        const data = await response.json();
+        const cartItems = document.getElementById("cartItems");
+        cartItems.innerHTML = "";
+        if (data.cartItems && data.cartItems.length > 0) {
+          data.cartItems.forEach(item => {
+            cartItems.innerHTML += `
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>${item.itemName} &times; ${item.quantity}</span>
+                <span>
+                  ₹${item.total}
+                  <button class="btn btn-danger btn-sm ms-2" onclick="removeCartItem('${item._id}')">
+                    Remove
+                  </button>
+                </span>
+              </li>
+            `;
+          });
+        } else {
+          cartItems.innerHTML = '<li class="list-group-item text-muted">Your cart is empty.</li>';
+        }
+        document.getElementById("total").innerText = data.grandTotal || 0;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    // ==========================================
+    // REMOVE CART ITEM
+    // ==========================================
+    async function removeCartItem(id) {
+      try {
+        await fetch(API + "/cart/" + id, { method: "DELETE" });
+        loadCart();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    // ==========================================
+    // INITIAL LOAD
+    // ==========================================
+    loadMenu();
+    loadCart();
+  </script>
+</body>
+</html>

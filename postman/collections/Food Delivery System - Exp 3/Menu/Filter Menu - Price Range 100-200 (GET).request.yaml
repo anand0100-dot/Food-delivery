@@ -1,0 +1,7 @@
+$kind: http-request
+url: http://localhost:5000/menu/filter?minPrice=100&maxPrice=200
+method: GET
+queryParams:
+  minPrice: "100"
+  maxPrice: "200"
+order: 7000

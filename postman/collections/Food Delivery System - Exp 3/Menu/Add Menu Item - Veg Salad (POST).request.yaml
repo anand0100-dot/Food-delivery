@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://localhost:5000/menu
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Veg Salad",
+      "category": "Salad",
+      "cuisine": "Indian",
+      "price": 150,
+      "veg": true
+    }
+order: 3000

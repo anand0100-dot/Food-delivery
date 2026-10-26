@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:5000/menu/filter?veg=false
+method: GET
+queryParams:
+  veg: "false"
+order: 6000

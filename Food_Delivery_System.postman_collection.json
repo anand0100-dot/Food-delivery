@@ -1,0 +1,245 @@
+{
+  "info": {
+    "name": "Food Delivery System - Exp 3",
+    "description": "Postman collection for Exp-3: Full Stack Integration of Food Delivery System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Restaurants",
+      "item": [
+        {
+          "name": "Add Restaurant (POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Pizza Hub\",\n  \"cuisine\": \"Italian\",\n  \"location\": \"Delhi\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/restaurants",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["restaurants"]
+            }
+          }
+        },
+        {
+          "name": "Get All Restaurants (GET)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/restaurants",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["restaurants"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Menu",
+      "item": [
+        {
+          "name": "Add Menu Item - Veg Pizza (POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Veg Pizza\",\n  \"category\": \"Pizza\",\n  \"cuisine\": \"Italian\",\n  \"price\": 250,\n  \"veg\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/menu",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["menu"]
+            }
+          }
+        },
+        {
+          "name": "Add Menu Item - Chicken Burger (POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Chicken Burger\",\n  \"category\": \"Burger\",\n  \"cuisine\": \"American\",\n  \"price\": 180,\n  \"veg\": false\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/menu",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["menu"]
+            }
+          }
+        },
+        {
+          "name": "Add Menu Item - Veg Salad (POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Veg Salad\",\n  \"category\": \"Salad\",\n  \"cuisine\": \"Indian\",\n  \"price\": 150,\n  \"veg\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/menu",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["menu"]
+            }
+          }
+        },
+        {
+          "name": "Get All Menu Items (GET)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/menu",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["menu"]
+            }
+          }
+        },
+        {
+          "name": "Filter Menu - Veg Only (GET)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/menu/filter?veg=true",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["menu", "filter"],
+              "query": [
+                {
+                  "key": "veg",
+                  "value": "true"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Filter Menu - Non-Veg Only (GET)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/menu/filter?veg=false",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["menu", "filter"],
+              "query": [
+                {
+                  "key": "veg",
+                  "value": "false"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Filter Menu - Price Range 100-200 (GET)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/menu/filter?minPrice=100&maxPrice=200",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["menu", "filter"],
+              "query": [
+                {
+                  "key": "minPrice",
+                  "value": "100"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "200"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "item": [
+        {
+          "name": "Add Item to Cart (POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"itemName\": \"Veg Pizza\",\n  \"quantity\": 2,\n  \"price\": 250\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["cart"]
+            }
+          }
+        },
+        {
+          "name": "Get Cart Items (GET)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/cart",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["cart"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

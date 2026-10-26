@@ -1,0 +1,16 @@
+$kind: http-request
+url: http://localhost:5000/menu
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Chicken Burger",
+      "category": "Burger",
+      "cuisine": "American",
+      "price": 180,
+      "veg": false
+    }
+order: 2000

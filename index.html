@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress - Fast &amp; Delicious Food Delivery</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bag-heart-fill text-warning"></i> Food<span>Express</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#restaurants"><i class="bi bi-shop me-1"></i> Restaurants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offers"><i class="bi bi-tag me-1"></i> Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu"><i class="bi bi-egg-fried me-1"></i> Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cart"><i class="bi bi-cart me-1"></i> Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i> Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Search Input in Navbar -->
+                <div class="search-form me-lg-3 my-2 my-lg-0">
+                    <input type="search" id="navSearchInput" class="form-control form-control-sm search-input" placeholder="Search pizza, burger...">
+                    <i class="bi bi-search search-icon"></i>
+                </div>
+
+                <!-- Cart Button -->
+                <a href="#cart" class="btn cart-nav-btn mt-2 mt-lg-0">
+                    <i class="bi bi-cart-fill"></i> Cart
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Delicious Food Delivered Fast 🍔</h1>
+                <p>Order fresh meals from your favorite local restaurants delivered right to your doorstep in 30 minutes.</p>
+
+                <!-- Search Bar in Hero -->
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="input-group input-group-lg shadow-lg rounded-pill bg-white p-1">
+                            <span class="input-group-text bg-transparent border-0 ps-3">
+                                <i class="bi bi-search text-warning fs-4"></i>
+                            </span>
+                            <input type="text" id="heroSearchInput" class="form-control border-0 shadow-none rounded-pill" placeholder="Search dishes, cuisines or restaurants...">
+                            <a href="#menu" class="btn btn-warning rounded-pill px-4 fw-bold d-flex align-items-center">Find Food</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-badges">
+                    <div class="hero-badge-item"><i class="bi bi-lightning-charge-fill text-warning"></i> 30-Min Fast Delivery</div>
+                    <div class="hero-badge-item"><i class="bi bi-shield-check text-success"></i> 100% Hygienic</div>
+                    <div class="hero-badge-item"><i class="bi bi-percent text-danger"></i> Exciting Daily Offers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RESTAURANTS SECTION ================= -->
+    <section class="container mt-5 pt-4" id="restaurants">
+        <div class="text-center">
+            <h2 class="section-title">Popular Restaurants</h2>
+            <p class="text-muted">Top dining spots in your neighborhood</p>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <!-- Restaurant 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card custom-card restaurant-card">
+                    <div class="card-img-container">
+                        <img src="images/restaurant1.jpg" alt="Pizza Hub">
+                        <div class="badge-top-left">
+                            <span class="badge bg-warning text-dark font-weight-bold">Popular</span>
+                        </div>
+                        <div class="badge-top-right">
+                            <span class="rating-badge"><i class="bi bi-star-fill"></i> 4.8</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Pizza Hub</h5>
+                        <p class="text-muted mb-2"><i class="bi bi-shop me-1"></i> Italian, Fast Food, Pizza</p>
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                            <span class="small text-muted"><i class="bi bi-clock me-1"></i> 20-30 min</span>
+                            <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> 2.5 km away</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card custom-card restaurant-card">
+                    <div class="card-img-container">
+                        <img src="images/restaurant2.jpg" alt="Indian Spice">
+                        <div class="badge-top-left">
+                            <span class="badge bg-success">Chef's Special</span>
+                        </div>
+                        <div class="badge-top-right">
+                            <span class="rating-badge"><i class="bi bi-star-fill"></i> 4.9</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Indian Spice</h5>
+                        <p class="text-muted mb-2"><i class="bi bi-shop me-1"></i> North &amp; South Indian, Biryani</p>
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                            <span class="small text-muted"><i class="bi bi-clock me-1"></i> 25-35 min</span>
+                            <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> 1.8 km away</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card custom-card restaurant-card">
+                    <div class="card-img-container">
+                        <img src="images/restaurant3.jpg" alt="Burger Point">
+                        <div class="badge-top-left">
+                            <span class="badge bg-danger">Top Rated</span>
+                        </div>
+                        <div class="badge-top-right">
+                            <span class="rating-badge"><i class="bi bi-star-fill"></i> 4.7</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Burger Point</h5>
+                        <p class="text-muted mb-2"><i class="bi bi-shop me-1"></i> Gourmet Burgers, Fries &amp; Shakes</p>
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                            <span class="small text-muted"><i class="bi bi-clock me-1"></i> 15-25 min</span>
+                            <span class="small text-muted"><i class="bi bi-geo-alt me-1"></i> 3.1 km away</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= OFFERS CAROUSEL ================= -->
+    <section class="container mt-5 pt-4" id="offers">
+        <div class="text-center">
+            <h2 class="section-title">Special Offers &amp; Deals</h2>
+            <p class="text-muted">Grab big discounts on your favorite meals</p>
+        </div>
+
+        <div id="offerCarousel" class="carousel slide offer-carousel-container mt-2" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#offerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#offerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#offerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="offer-card-banner" style="background-image: url('images/offer1.jpg');">
+                        <div class="offer-overlay"></div>
+                        <div class="offer-content">
+                            <span class="offer-tag">FLAT 50% OFF</span>
+                            <h2 class="display-5 fw-bold text-white mb-2">Weekend Feast Extravaganza</h2>
+                            <p class="lead mb-4">Get 50% discount on all pizza &amp; pasta orders above ₹400.</p>
+                            <a href="#menu" class="btn btn-warning rounded-pill px-4 fw-bold">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="offer-card-banner" style="background-image: url('images/offer2.jpg');">
+                        <div class="offer-overlay"></div>
+                        <div class="offer-content">
+                            <span class="offer-tag">FREE DELIVERY</span>
+                            <h2 class="display-5 fw-bold text-white mb-2">Zero Delivery Fee</h2>
+                            <p class="lead mb-4">Enjoy free lightning-fast delivery on all orders over ₹500 today!</p>
+                            <a href="#menu" class="btn btn-warning rounded-pill px-4 fw-bold">Explore Menu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="offer-card-banner" style="background-image: url('images/offer3.jpg');">
+                        <div class="offer-overlay"></div>
+                        <div class="offer-content">
+                            <span class="offer-tag">BUY 1 GET 1 FREE</span>
+                            <h2 class="display-5 fw-bold text-white mb-2">Burger Bonanza Combo</h2>
+                            <p class="lead mb-4">Buy any gourmet chicken or veggie burger and get another absolutely free.</p>
+                            <a href="#menu" class="btn btn-warning rounded-pill px-4 fw-bold">Claim Deal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#offerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ================= FOOD MENU SECTION ================= -->
+    <section class="container mt-5 pt-4" id="menu">
+        <div class="text-center">
+            <h2 class="section-title">Explore Our Menu</h2>
+            <p class="text-muted">Filtered delicious items prepared fresh by top chefs</p>
+        </div>
+
+        <!-- Multi-criteria Filter Bar -->
+        <div class="filter-wrapper mt-4">
+            <div class="row g-3 align-items-center">
+                <!-- Category Filter Buttons -->
+                <div class="col-lg-6">
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-filter-category active" data-category="all">
+                            <i class="bi bi-grid-fill me-1"></i> All Items
+                        </button>
+                        <button class="btn btn-filter-category" data-category="veg">
+                            <span class="food-type-icon veg me-1"></span> Veg Only
+                        </button>
+                        <button class="btn btn-filter-category" data-category="nonveg">
+                            <span class="food-type-icon nonveg me-1"></span> Non-Veg
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cuisine Filter Select -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-funnel"></i></span>
+                        <select class="form-select" id="cuisineFilterSelect">
+                            <option value="all">All Cuisines</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Indian">Indian</option>
+                            <option value="American">American</option>
+                            <option value="Asian">Asian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Price/Rating Sort Select -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text bg-light"><i class="bi bi-sort-down"></i></span>
+                        <select class="form-select" id="priceSortSelect">
+                            <option value="default">Sort By: Default</option>
+                            <option value="low-high">Price: Low to High</option>
+                            <option value="high-low">Price: High to Low</option>
+                            <option value="rating">Top Rated</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Food Items Grid -->
+        <div class="row" id="foodContainer">
+            <!-- Dynamic JS render target -->
+        </div>
+    </section>
+
+    <!-- ================= ITEM DETAILS MODAL ================= -->
+    <div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+                <div class="position-relative">
+                    <img src="" id="modalFoodImage" class="w-100" style="height: 240px; object-fit: cover;" alt="Food Image">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 bg-dark p-2 rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="position-absolute bottom-0 start-0 m-3">
+                        <span id="modalFoodCategoryBadge" class="food-type-icon bg-white p-1"></span>
+                    </div>
+                </div>
+
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h4 class="modal-title fw-bold" id="modalFoodTitle">Food Name</h4>
+                        <div class="fs-4 fw-bold text-primary" id="modalFoodPrice">₹0</div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3 mb-3 text-muted small">
+                        <span><i class="bi bi-geo text-warning me-1"></i> <span id="modalFoodCuisine">Cuisine</span></span>
+                        <span><i class="bi bi-star-fill text-warning me-1"></i> <span id="modalFoodRating">0</span> Rating</span>
+                        <span><i class="bi bi-clock text-primary me-1"></i> <span id="modalFoodPrep">20 min</span></span>
+                    </div>
+
+                    <p class="text-muted" id="modalFoodDescription">Food description...</p>
+
+                    <div class="mb-4">
+                        <h6 class="fw-bold mb-2">Ingredients:</h6>
+                        <div id="modalFoodIngredients" class="d-flex flex-wrap gap-1">
+                            <!-- Ingredients Badges -->
+                        </div>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-warning btn-lg fw-bold rounded-pill" id="modalAddToCartBtn">
+                            <i class="bi bi-cart-plus me-1"></i> Add To Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SHOPPING CART SECTION ================= -->
+    <section class="container mt-5 pt-4" id="cart">
+        <div class="text-center">
+            <h2 class="section-title">Your Shopping Cart</h2>
+            <p class="text-muted">Review items and proceed to checkout</p>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-10">
+                <div class="cart-card">
+                    <!-- Empty Cart State -->
+                    <div id="emptyCartState" class="empty-cart-state">
+                        <i class="bi bi-cart-x"></i>
+                        <h4>Your cart is currently empty</h4>
+                        <p>Browse our menu and pick delicious meals to satisfy your hunger!</p>
+                        <a href="#menu" class="btn btn-warning rounded-pill px-4 mt-2 font-weight-bold">Browse Menu</a>
+                    </div>
+
+                    <!-- Cart Content Container -->
+                    <div id="cartContentContainer" class="d-none">
+                        <div class="d-flex justify-content-between align-items-center pb-3 border-bottom mb-3">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-basket2 text-warning me-2"></i> Selected Items (<span id="cartCountSummary">0</span>)</h5>
+                            <button class="btn btn-sm btn-outline-danger" onclick="clearCart()">
+                                <i class="bi bi-trash me-1"></i> Clear Cart
+                            </button>
+                        </div>
+
+                        <!-- Cart Items List -->
+                        <div id="cartItemsContainer" class="mb-4">
+                            <!-- JS populates rows -->
+                        </div>
+
+                        <!-- Cart Summary Box -->
+                        <div class="bg-light p-3 rounded-3 mt-4">
+                            <h6 class="fw-bold mb-3">Bill Breakdown</h6>
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="cartSubtotal" class="fw-semibold">₹0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee <small class="text-success">(Free over ₹500)</small></span>
+                                <span id="cartDeliveryFee" class="fw-semibold">₹40</span>
+                            </div>
+                            <div class="summary-row text-success">
+                                <span>Discount <small>(Offers Applied)</small></span>
+                                <span id="cartDiscount" class="fw-semibold">-₹0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Taxes &amp; Charges (5% GST)</span>
+                                <span id="cartTax" class="fw-semibold">₹0</span>
+                            </div>
+                            <div class="summary-total">
+                                <span>Grand Total</span>
+                                <span id="cartTotal" class="text-primary">₹0</span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button class="btn btn-warning btn-lg fw-bold rounded-pill py-3" onclick="handleCheckout()">
+                                Proceed to Checkout <i class="bi bi-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CHECKOUT CONFIRMATION MODAL ================= -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4 rounded-4 border-0">
+                <div class="my-3">
+                    <i class="bi bi-check-circle-fill text-success display-1"></i>
+                </div>
+                <h3 class="fw-bold text-success">Order Placed Successfully! 🎉</h3>
+                <p class="text-muted">Thank you for ordering with FoodExpress. Your delicious meal is on its way!</p>
+                <div class="bg-light p-3 rounded-3 my-3 text-start">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted">Order ID:</span>
+                        <strong id="checkoutOrderId">#ORD-123456</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted">Amount Paid:</span>
+                        <strong id="checkoutAmount">₹0</strong>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted">Estimated Delivery:</span>
+                        <strong class="text-warning"><i class="bi bi-lightning-charge-fill me-1"></i> 30 Minutes</strong>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-dark rounded-pill px-4 mt-2" data-bs-dismiss="modal">Close &amp; Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= CONTACT US &amp; FORM VALIDATION SECTION ================= -->
+    <section class="container mt-5 pt-4" id="contact">
+        <div class="text-center">
+            <h2 class="section-title">Contact Us &amp; Feedback</h2>
+            <p class="text-muted">Have a question or feedback? Drop us a message below!</p>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-8">
+                <div class="contact-card">
+                    <!-- Success Alert -->
+                    <div id="formSuccessAlert" class="alert alert-success d-none mb-4 rounded-3 d-flex align-items-center gap-2" role="alert">
+                        <i class="bi bi-check-circle-fill fs-4"></i>
+                        <div>
+                            <strong>Form Submitted Successfully!</strong> Thank you for reaching out. We will get back to you shortly.
+                        </div>
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <!-- Exercise 1: Name Field -->
+                        <div class="form-group-custom">
+                            <label for="nameInput" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control form-control-lg" id="nameInput" placeholder="Enter your full name" required>
+                            <div class="invalid-feedback-custom">Please enter at least 2 characters for your name.</div>
+                            <div class="valid-feedback-custom">Looks good!</div>
+                        </div>
+
+                        <!-- Exercise 2: Email Field with Regex -->
+                        <div class="form-group-custom">
+                            <label for="emailInput" class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control form-control-lg" id="emailInput" placeholder="example@domain.com" required>
+                            <div class="invalid-feedback-custom">Please enter a valid email address (e.g. name@domain.com).</div>
+                            <div class="valid-feedback-custom">Valid email address!</div>
+                        </div>
+
+                        <!-- Exercise 3: Mobile Number Field with Regex -->
+                        <div class="form-group-custom">
+                            <label for="mobileInput" class="form-label fw-semibold">Mobile Number <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control form-control-lg" id="mobileInput" placeholder="10-digit mobile number (e.g. 9876543210)" required>
+                            <div class="invalid-feedback-custom">Please enter a valid 10-digit Indian mobile number starting with 6-9.</div>
+                            <div class="valid-feedback-custom">Valid mobile number!</div>
+                        </div>
+
+                        <!-- Exercise 4: Password Field with Regex -->
+                        <div class="form-group-custom">
+                            <label for="passwordInput" class="form-label fw-semibold">Account Password / Security Code <span class="text-danger">*</span></label>
+                            <input type="password" class="form-control form-control-lg" id="passwordInput" placeholder="Enter password" required>
+                            <div class="password-rules">
+                                <i class="bi bi-info-circle me-1"></i> Must contain: Min 8 characters, 1 Uppercase letter, 1 Lowercase letter, 1 Number, and 1 Special character (@$!%*?&amp;).
+                            </div>
+                            <div class="invalid-feedback-custom">Password does not satisfy all security requirements.</div>
+                            <div class="valid-feedback-custom">Strong password!</div>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-group-custom">
+                            <label for="messageInput" class="form-label fw-semibold">Your Message / Feedback</label>
+                            <textarea class="form-control" id="messageInput" rows="4" placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+
+                        <!-- Exercise 5: Form Submit Button -->
+                        <button type="submit" class="btn btn-warning btn-lg w-100 fw-bold rounded-pill shadow-sm">
+                            <i class="bi bi-send-fill me-1"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold"><i class="bi bi-bag-heart-fill text-warning me-2"></i>FoodExpress</h5>
+                    <p class="text-white-50">Your favorite food delivered hot and fresh in minutes. Bringing local flavors straight to your doorstep.</p>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#restaurants">Restaurants</a></li>
+                        <li class="mb-2"><a href="#offers">Special Offers</a></li>
+                        <li class="mb-2"><a href="#menu">Food Menu</a></li>
+                        <li class="mb-2"><a href="#cart">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h5>Cuisines</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#menu">Italian Pizza</a></li>
+                        <li class="mb-2"><a href="#menu">Indian Biryani</a></li>
+                        <li class="mb-2"><a href="#menu">American Burgers</a></li>
+                        <li class="mb-2"><a href="#menu">Japanese Sushi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5>Subscribe to Offers</h5>
+                    <p class="text-white-50 small">Get weekly promo codes and discount vouchers sent directly to your inbox.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-warning fw-bold" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="mb-0">© 2026 FoodExpress. All Rights Reserved. Designed for Food Delivery System Experiment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 Bundle JS (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
